@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+
+ <div class="contact">
+    <div class="left">
+        <i class="fa fa-map-marker"></i><span class="form-info">  Udaipur,India</span>
+                       <br><br>
+          <i class="fa fa-envelope"></i><span class="form-info"> Shradeshjain123@email.com</span>
+                       <br><br>
+             <i class="fa fa-phone"></i><span class="form-info"> +91 8690 238 350</span>
+                       
+                   </div>
+     <form>
+       <h1 class="heading">Contact Form</h1>
+       <p class="by">Required Fileds are followed by *</p>
+        <fieldset><legend>Personal Informantion</legend>
+       <p>Name: * <input type="text" name="name" required     placeholder="Shradhesh Jain"></p>
+        <p>Father Name: * <input type="text" name="name"    required placeholder="Nitesh Jain"> </p>
+        <p>Date of Birth: <input type="date" name="dob"  placeholder="17-11-1990" required> </p>
+    
+        <p>Gender: *</p>
+        Male <input type="radio" name="gender" required>
+        Female <input type="radio" name="gender" required>
+        Prefer not to say <input type="radio" name="gender" required>    
+    
+      </fieldset>  
+      <!-- <p> Address: <textarea type="address" id="address" cols="50" rows="5" placeholder="Enter Your Address">
+       </textarea> </p> --><fieldset><legend>Get in Touch</legend>
+      <p> Email: * <input type="email" id="email" required placeholder="Shradeshjain123@gmail.com"> </p>
+      <p> Phone Number: * <input type="number" id="number" required placeholder="9898989898"> </p>
+        </fieldset> <fieldset>
+       <legend>Address: * </legend>
+       Country: <input type="name" id="country"  placeholder="India" required><br>
+       State: <input type="name" id="state" placeholder="Rajasthan" required> <br>
+       City: <input type="name" id="city"   placeholder="Udaipur" required><br>
+       PIN Code: <input type="name" id="pincode"    placeholder="327077" required><br>
+        Street Address: <textarea name="address"      id="address"   cols="30" rows="3" placeholder="Enter Your Address">
+       </textarea>  </fieldset>
+        <input type="submit" value="Sumbit"><input      type="reset" value="Reset">
+      </form>
+   </div>
+</div>
+    
+</body>
+</html>

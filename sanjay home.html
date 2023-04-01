@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="veiwport" content="width=device-width, initial-scale=1.0">
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+<link rel="manifest" href="favicon/site.webmanifest">
+<!-- CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">        
+<title>Sanjay Enterprise | Home</title>
+      <style>
+        body{
+            margin: 0px;
+            font-family:'Segoe UI', 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+        .banner{
+            background-image: url(result.gif);
+            height: 20vw;
+            min-height: 100px;
+            background-repeat: no-repeat;
+            background-position: top center;
+            background-size: 80%;
+            background-color: rgb(17, 124, 143);
+            background-attachment: fixed;
+        }
+        footer,nav{
+            background-color: #333;
+            overflow: hidden;
+            display: flex;
+        }
+        main{
+            background-color: white;
+            text-align: center;
+        }
+        nav a{
+            text-decoration: none;
+            padding:14px 20px;
+            text-align: center; 
+            float: left;
+            display: flex;
+            color: white;
+        }
+        footer a{
+            text-decoration: none;
+            padding:14px 20px;
+            text-align: center; 
+            float: left;
+            display: flex;
+            color: white;
+        }
+        .flex-align-right {
+            margin-left: auto;
+        }
+
+        .menu-btn:hover{
+            background-color: #ddd;
+            color: black;
+        }
+        .menu-btn:visited{
+            background-color: aliceblue;
+            color: aquamarine;
+        }
+        section h2 span{
+            background: linear-gradient(to right, #f5d837, #bbb812);
+            padding: 10px 55px;
+            border-radius: 20px;
+            color: white;
+        }
+      
+        .profile_img{
+            border-radius: 50%;
+        }
+        .profile_name{
+            font-size: 2em;
+            font-weight: 900;
+            letter-spacing: 4px;
+            word-spacing: 10px;
+            text-transform: uppercase;
+            margin:20px 0px 30px 0px ;
+        }
+        .sm-handle a{
+            background-color: rgb(125 125 125 / 25%);
+            padding: 10px 15px;
+            border-radius: 30px;
+            margin: 5px 10px;
+            text-decoration: none;
+            font-size: 1.1em;
+        }
+        .sm-handle a:hover{
+            background-color:rbg(30 30 30 / 25%) ;
+        }
+        .sm-handle a i{
+            margin: 5px;
+        }
+
+.carousel-cell {
+    width: 166%;
+    margin-right: 10px;
+    border-radius: 5px;
+}
+.carousel-cell iframe{
+    max-width: 160%;
+}
+/* .carousel1 {
+  background: #EEE;
+} */
+
+.carousel-cell1 {
+  width: 66%;
+  height: 430px;
+  margin-right: 10px;
+  border-radius: 5px;
+  counter-increment: gallery-cell;
+}
+
+.butt{
+      border-radius:5px;
+      border-width:2px;
+      font-family:comic sans ms;
+      width: 100px; 
+      height: 40px;
+      color:red;
+      font-size:5.5mm;
+}
+
+
+
+
+        @media screen and (max-width: 650px) {
+            footer , nav {
+                flex-direction: column;
+                padding: 10px 0px;
+            }
+            .flex-align-right {
+            margin-left: 0; }
+            
+        }
+
+      </style>
+    </head>
+
+    <body>
+        <header>
+            <div class="banner"></div>
+        </header> 
+        <nav>
+            <a href="#" class="menu-btn">Home </a>
+            <a href="#auto" class="menu-btn">Auto Parts</a>
+            <a href="https://sanjaytyrehouse.business.site/" target="_blank" class="nag menu-btn">Tyre House</a>
+            <a href="#cont" class="menu-btn">Contruction</a>
+            <a href="#pipe" class="menu-btn">Pipes </a>
+            <a href="#" class="menu-btn flex-align-right">Login/SignUp</a>
+        </nav>
+        <main>
+            <section style="min-height: 100vh;">
+                <h2 style=" padding: 20px;" id="tyre"><span>Tyre House</span></h2>
+                <div class="carousel"
+                     data-flickity='{ "autoPlay": true }'>
+                <div class="carousel-cell"><iframe  height="250" src="https://www.youtube.com/embed/lW44_erbHc4" title="YouTube video player" frameborder="1" allow="accelerometer; autoplay ; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen ></iframe></div>
+                <div class="carousel-cell"><iframe  height="250" src="https://www.youtube.com/embed/tGvHxvWyY2Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen ></iframe></div>
+                <div class="carousel-cell"><iframe  height="250" src="https://www.youtube.com/embed/dFNx8zjlJWs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+                <div class="carousel-cell"><iframe  height="250" src="https://www.youtube.com/embed/lW44_erbHc4" title="YouTube video player" frameborder="1" allow="accelerometer; autoplay ; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen ></iframe></div>
+                <div class="carousel-cell"><iframe height="250" src="https://www.youtube.com/embed/dFNx8zjlJWs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+              </div> 
+                <p>Apollo Tyres Ltd is an international tyre manufacturer and the leading tyre brand in India. It is built around the core principles of creating stakeholder <br>
+                value through reliability in its products and dependability in its relationships. The company has a total of six manufacturing units -- 4 in India and 1 <br>
+                each in the Netherlands and Hungary.</p>
+                 <h3>India’s fifth and 7th globally, is coming up in Andhra Pradesh.</h3>
+                
+               <p>The company markets its products under its two global brands – Apollo and Vredestein, and its products are available in over 100 countries<br>
+                 through a vast network of branded, exclusive and multi-product outlets. The product portfolio of the company includes the entire range of passenger car,<br>
+                  SUV, MUV, light truck, truck-bus, two-wheeler, agriculture, industrial, specialty, bicycle and off-the-road tyres, and retreading material and tyres.</p>
+                
+                  <p>Headquartered in Gurgaon, India, the company has a turnover of US$ 2.3 billion and ranks among the global top 20 tyre makers. Apollo Tyres<br>
+                 has been recognised as the ‘Best Company To Work For’ both in Asia and Europe in the recent past, and has won several accolades for its HIV-AIDS <br>
+                 awareness and prevention initiative for the trucking and allied communities, and for its Waste Management initiatives in the community.</p>
+                
+                 <p>Acquired entities: In November 2015, Apollo Tyres acquired Reifencom GmbH, one of the largest tyre distributors in Germany, with both online <br>
+                and offline presence. In May 2009, the company acquired Apollo Vredestein BV(originally Vredestein Banden BV) in the Netherlands, producer of niche<br> high 
+                end passenger car and specialty tyres, and with an extensive distribution network across Europe.</p>
+                <em> <b>Location:</b> Sanjay Tyre House , Ghatol, Rajasthan 327023</em> 
+                <button class="butt">
+                    <a href="https://www.google.com/maps/place/SANJAY+TYRE+HOUSE/@23.7574283,74.4073166,15z/data=!4m5!3m4!1s0x0:0x7079dc9ec99cd703!8m2!3d23.7574283!4d74.4073166" target="_blank"> Map </a></button>
+                    
+         
+            </section>
+
+            <section>
+                <H2 id="cont"><span> Contruction</span></H2>
+                <div class="carousel1" data-flickity='{ "autoPlay": true }'>
+                  <div class="carousel-cell1">
+                    <img src="https://assets.sentinelassam.com/h-upload/2021/11/06/266491-stone-carrying-dumper.webp?w=400&dpr=2.6" > </img>
+                  </div>
+                  <div class="carousel-cell1"><img src="https://sawantenterprises.co/wp-content/uploads/2021/05/service4.jpg" height="400px"> </img></div>
+                  <div class="carousel-cell1"><img src="https://media.karousell.com/media/photos/products/2021/10/28/gravel_and_sand_1635389063_c32c1c1d.jpg"> </img></div>
+                </div>
+                </section>
+
+                <p style="margin-left:100px;"> <h2 style="margin-bottom: 20px;"> Stone:</h2>
+                    Stone is also one of the oldest types of building materials used since
+                     ancient times. <br>Stone masonry is made using natural stones and mortar. 
+                     The most common types <br>of stones are sandstone, granite, marble,
+                      limestone, and laterite. Stone masonry is <br>
+                    mostly followed in areas that have locally available stones.<br>
+                </p>   <p style="margin-left:100px ;">
+                    Stone masonry gives a superior appearance to the
+                     building and is mostly not 
+                    plastered to manifest the beauty of the stones.<br> The major drawback is 
+                    that naturally occurring stones are of different sizes and shapes which 
+                    may be difficult to use in masonry construction.
+                </p>
+                <h2  style="color:steelblue;">Uses:</h2><p>Stone is used for building foundations, floors, retaining walls, arches, walls and columns.</p>
+                <h2> Bricks:</h2>
+                <p>Bricks are rectangular blocks usually made from clay or mud and hardened<br>
+                     by heating or chemical process. Bricks are set with mortar which <br>
+                     acts as an adhesive to hold them in place and withstand the loads
+                      acting on them.</p><p>
+
+                    Nowadays, bricks are also available in different varieties made from<br>
+                     concrete, fly ash, lime, calcium silicate, ceramics, etc. Out of them,<br>
+                      concrete bricks are gaining popularity in modern construction.</p>
+                <h2  style="color:steelblue;">Uses:</h2><p>Bricks are used in masonry walls, paths, driveways, fireplaces, etc.</p>
+                <h2> Concrete:</h2>
+                <p>Concrete is the most important and widely used building material. <br>
+                    It is made of cement, fine and coarse aggregates, and water of 
+                    suitable proportions.<br> Chemical admixtures are also optionally 
+                    used to accelerate or slow down the setting process of concrete.</p>
+                    <p>The properties of concrete depend upon the quantity and mix ratio 
+                        of concrete ingredients.<br> The use of concrete has become predominant 
+                        in constrution where strength and durability are prime factors.</p>
+                        <p>Nowadays, most residential, commercial, and industrial buildings are  constructed of concrete.<br> Different types of concrete are used in construction such as plain  <br>cement concrete, reinforced cement  concrete, prestressed concrete, etc.</p>
+                <h2 style="color:steelblue;"> Uses:</h2><p>Concrete is suitably used in the construction of buildings, 
+                    bridges, dams, towers, roads, etc.</p>
+         <section>
+            <h2 id="auto"><span>Auto part</span></h2>
+            <img src="https://autonomesup.com/wp-content/uploads/2021/02/Purchasing-Auto-Parts-Online.jpg" width="40%" height="350" ></img>
+            <img src="https://media.istockphoto.com/photos/auto-parts-spare-parts-car-on-the-grey-background-3d-rendering-picture-id1190798478?k=20&m=1190798478&s=170667a&w=0&h=1borslETPAXmv9CkTMMeiOb5_qiE63pc6C_VJQmSPe8=" width="40%" height="350"></img>
+            <p><b>Auto Spare parts and Accessories:</b> if added accurately with the car 
+                can enhance the overall <br>appearance of the vehicle. The purchasing of 
+                the automotive parts becomes quite essential<br> during a repair, 
+                replacement, or the enhancement of the vehicle. Moreover, the use
+                 of high <br>quality as well reliable spare parts
+                 can make wide difference in the better maintenance of the vehicle.</p>
+                <em> <b>Location:</b> Sanjay Auto Parts, Ghatol, Rajasthan 327023</em> 
+                <button class="butt">
+                    <a href="https://www.google.com/maps/dir//QC69%2BFWC+Sanjay+Auto+Parts,+Teliwada,+Ghatol,+Rajasthan+327023/@23.7611911,74.4197527,15z/data=!4m16!1m6!3m5!1s0x0:0x24b1ae373ef2afea!2sSanjay+Auto+Parts!8m2!3d23.7611912!4d74.4197516!4m8!1m0!1m5!1m1!1s0x3966e865058c976d:0x24b1ae373ef2afea!2m2!1d74.4197516!2d23.7611912!3e3?hl=en-GB" target="_blank"> Map </a></button>
+         </section> <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+         <section>
+            <h2 id="pipe"><span>Pipes Work</span></h2>
+            <div class="carousel1" data-flickity='{ "autoPlay": true }'>
+                <div class="carousel-cell1"><img src="https://5.imimg.com/data5/IA/YT/MY-7863192/hose-fitting-machine-500x500.jpg" style="border-radius: 5px";></div>
+                <div class="carousel-cell1"><img src="https://5.imimg.com/data5/PR/SU/MY-4990620/hydraulic-hose-crimping-machine-500x500.jpg" height="300px" style="border-radius: 5px"></div>
+                <div class="carousel-cell1"><img src="https://5.imimg.com/data5/OJ/QU/MY-30855767/hydraulic-hose-crimping-machine-500x500.jpg" height="300px" style="border-radius: 5px"></div>
+                <div class="carousel-cell1"> <img src="https://static.connect2india.com/c2icd/company_resources/3212521/images/products/product-hydraulic-hose-pipe-crimping-machine.jpg" style="border-radius: 5px"></div>
+              </div>
+              <p>
+                Product Details:
+Automatic Grade	Automatic , Manual
+Machine Structure	Vertical
+Machine Type	Hose/Pipe Crimping Machine<br>
+With assistance from highly qualified and experienced professionals, we are engaged in manufacturing and supplying a huge gamut of Hose Pipe Crimping Machine.<br><br>
+We are manufacturer and Supplier of high quality and heavy duty hose crimping machines with low cost.<br>
+our Hydraulic Hose Pipe Crimping Machine have a solid head construction compare to other brand machines available<br> at markets. this make our machine to apply maximum crimping pressure according to the hose size and type.
+<h3>Features:</h3>
+<li>High functionality</li><li>High efficiency</li>
+<li>Long service life</li><li>Less maintenance</li>
+<li>High efficiency</li><li>Easy to operate</li>
+              </p>
+         </section>
+         <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+         <section>
+            <h2 class="profile_name">
+              <span>  Our Founder</span>
+            </h2>
+            <img src="SHRADHESH.jpg" height="350" alt="This is Shradesh Jain" class="profile_img"> </img>
+            <h3>Shradhesh Jain</h3>
+            <div class="sm-handle">
+            <a href="https://www.instagram.com/shradesh_jain71/" target="_blank" rel="noopener"><i class="fa fa-instagram fa-lg" style="color:#dd2a7b"> </i> Instagram</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+            <a href="https://t.me/S_h_r_a_dd_e_s_H" target="_blank" rel="noopener"><i class="fa fa-telegram fa-lg" style="color:rgb(71, 196, 238)"></i> Telegram</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+            <a href="Wa.me/918690238350" target="_blank" rel="noopener"><i class="fa fa-whatsapp fa-lg" style="color:rgb(23, 233, 135)"></i> Whatsapp</a></div>
+
+         </section>
+         <!-- https://mail.google.com/shradeshjain123@gmail.com -->
+               </main><br><br><br><br><br><br><br><br><br><br>
+               <footer>
+                <a href="#" class="menu-btn"> FAQ</a>
+                <a href="#" class="menu-btn"> Contact Us</a>
+                <a href="#" class="menu-btn"> Terms of use</a>
+                <a href="#"  class="menu-btn"> Privacy Policy</a>
+                <a href="#" class="menu-btn"> Refund Policy</a>
+                <a href="#" class="mene-btn flex-align-right">&copy; 2022 | Sanjay Enterprise </a>
+               </footer>
+               <!-- JavaScript -->
+<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+
+    </body>
+    </html>
