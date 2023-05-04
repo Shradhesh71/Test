@@ -1,0 +1,847 @@
+@import url('https://fonts.googleapis.com/css2?family=Yeon+Sung&family=ZCOOL+QingKe+HuangYou&display=swap');
+
+:root {
+	--dark: #374151;
+	--darker: #1F2937;
+	--darkest: #111827;
+	--grey: #6B7280;
+	--pink: #EC4899;
+	--purple: #8B5CF6;
+	--light: #EEE;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+/* body{ */
+    /* background: url(https://images.pexels.com/photos/1268855/pexels-photo-1268855.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+    background-repeat: no-repeat;
+    background-size: cover; */
+/* } */
+.navigator{
+    float: right;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+}
+.navigator a{
+    text-decoration: none;
+    font-size: 1.3em;
+    padding: 14px 20px;
+    color: #1d1b8a;
+    position: relative;
+    font-weight: 700;
+}
+.navigator a::after{
+    content: '  ';
+    position: absolute;
+    width: 60%;
+    right: 0;
+    bottom: -.9px;
+    height: 3px;
+    background: #fff;
+    transform-origin: right;
+    border-radius: 6px;
+    transform: scaleX(0);
+    transition: transform .5s;
+}
+.navigator a:hover::after{
+    transform-origin: right;
+    transform: scaleX(1);
+}
+.navigator .lg-btn{
+    width: 150px;
+    height: 50px;
+    background: transparent;
+    border: 1px solid #421885;
+    outline: none;
+    border-radius: 6px;
+    font-size: 1.2em;
+    cursor: pointer;
+    color: #1d1b8a;
+    margin-left:40px ;
+    transition: .5s;
+    z-index: 100;
+    font-weight: 700;
+}
+.navigator .lg-btn:hover{
+    /* background: #fff; */
+    color: #162938; 
+    font-size: 1.1em;
+    text-decoration: underline;
+}
+.main-img{
+    margin-top: -50px;
+    width: 1535px;
+    height: 745px;
+}
+.login{
+    position: relative;
+    width: 400px;
+    height: 440px;
+    margin-top: -350px;
+    margin-left: 550px;
+    text-align: center;
+    z-index: 100;
+    background: transparent;
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 30px rgba(0,0,0,.5);
+    border: 2px solid rgba(255,255,255,.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    transform: scale(0);
+    transition: transform .5s ease, height .2s ease;
+}
+.login.active-popup {
+    transform: scale(1);
+
+}
+.login.active{
+    height: 520px;
+    /* width: 450px; */
+}
+
+.login .from-box{
+    width: 100%;
+    padding: 40px;
+}
+.login .from-box.wrp{
+   transition: transform .18s ease;
+   transform: translateX(0);
+}
+.login.active .from-box.wrp{
+    transition: none;
+    transform: translateX(-400px);
+}
+.login .from-box.reg{
+    position: absolute;
+    transform: translateX(450px);
+}
+.login.active .from-box.reg{
+    transition: transform .18s ease;
+    transform: translateX(0);
+}
+.login .icon-close{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 45px;
+    height: 45px;
+    font-size: 2em;
+    color: #fff;
+    align-items: center;
+    border-bottom-left-radius:50% ;
+    border-top-right-radius: 50%;
+    background: #162938;
+    overflow: hidden;
+    cursor: pointer;
+    z-index: 1;
+}
+.from-box h2{
+    font-size: 2em;
+    color: #162938;
+    text-align: center;
+}
+.input-box{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    border-bottom: 2px solid #162938;
+    margin: 30px 0;
+}
+.input-box label{
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    font-size: 1.0em;
+    color: #162938;
+    font-weight: 500;
+    pointer-events: none;
+    transition: .5s;
+}
+.input-box input:focus~label,
+.input-box input:valid~label{
+    top: -5px;
+}
+
+.input-box input{
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    color: #162938;
+    font-weight: 600;
+    padding: 0 35px 0 5px;
+}
+.input-box .icon {
+    position: absolute;
+    right: 8px;
+    font-size: 1.2em;
+    color: #162938;
+    line-height: 57px;
+}
+.remember-forget{
+    color: #162938;
+    font-size: 1.em;
+    font-weight: 500;
+    margin: -15px 0 15px;
+    display: flex;
+    justify-content: space-between;
+}
+.remember-forget label input{
+    accent-color: #162938;
+    margin-right: 3px;
+}
+.remember-forget a{
+    color: #162938;
+    text-decoration: none; 
+}
+.remember-forget a:hover{
+    text-decoration: underline;
+}
+.btn{
+    width: 100%;
+    height: 45px;
+    color: #fff;
+    background: #162938;
+    font-size: 1.1em;
+    font-weight: 500;
+    border: none;
+}
+.login-register{
+    color: #162938;
+    font-size: 1em;
+    text-align: center;
+    font-weight: 500;
+    margin: 25px 0 10px;
+}
+.login-register p a{
+    color: #162938;
+    text-decoration: none;
+    font-weight: 600;
+}
+.login-register p a:hover{
+    text-decoration: underline;
+}
+
+
+
+.aside{
+    margin-left: 50px;
+    width: 20px;
+    height: 200px;
+    z-index: 100;
+    margin-top: -600px;
+}
+ /* .aside .icon_main{ */
+    /* color: #162938; */
+    /* padding-bottom:8px; */
+/* } */ 
+
+.aside a{
+    padding-bottom: 10px;
+    margin-bottom: 5px;
+    font-size: 1.2em;
+    text-decoration: none;
+    color: rgb(55, 79, 101);
+    font-weight: 700;
+   /* color: #FF3CAC; */
+/* background-image: -webkit-linear-gradient(225deg, #FF3CAC 0%, #784BA0 50%, #2B86C5 100%); */
+
+    /* background: -webkit-linear-gradient(123deg, #74EBD5 0%, #9FACE6 50%, #a52fa5 100%); */
+    /* -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; */
+    font-weight: 500;
+    /* opacity: 90%; */
+}
+.aside a:hover{
+    text-decoration: underline;
+    font-size: 1.3em;
+}
+.aside a i{
+    color: #1d1b8a;
+    padding-bottom:5px;
+}
+.aside a i:hover{
+    animation: iconmain 1.5s ease-in-out infinite;
+    /* height: 20px; */
+}
+@keyframes iconmain{
+    0%{
+        transform: translateX(0);
+    }
+    50%{
+        transform: translateX(12px);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+.main-heading{
+    z-index: 100;
+    margin-top: 25px;
+    margin-left: 220px;
+    /* background:  #C850C0 46%; */
+    /* width: 500px; */
+    background: none;
+}
+.heading-text{
+    font-family:"Yeon sung";
+    font-size: 75px;
+    font-weight: 300;
+	color: #1d1b8a;
+
+    /* background: -webkit-linear-gradient(123deg, #74EBD5 0%, #9FACE6 50%, #a52fa5 100%); */
+    /* background-color: #4158D0; */
+    /* background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%); */
+
+    /* background-image: linear/ext; */
+	/* -webkit-text-fill-color: transparent; */
+    /* background:  #C850C0 ; 
+    background-image: conic-gradient(from -20deg at 42% 47%, red 0deg,red 97deg,blue 97deg, blue 180deg,green 180deg, green 270deg,yellow 270deg,  yellow 360deg);
+    /* 
+     background-clip: text; */
+	/* -webkit-background-clip: text;  */
+    /* -webkit-text-fill-color: transparent;  */
+}
+/*  rgb(102 123 142); */
+.heading-text span{
+    color: #1d1b8a;
+    padding-top: 50px;
+}
+
+/* Section 2 */
+.sec2{
+    margin-top: 250px;
+    margin-left: 50px;
+    /* width: 100px; */
+    /* display:flex; */
+    /* justify-content: space-between; */
+}
+.icon-offer{
+    position:fixed;
+    bottom: 0;
+    right: 0;
+    margin-right: 8px;
+    padding-bottom: -1px;
+    border-radius: 60px;
+    width: 90px;
+    box-shadow: 0 0 1rem #162938;
+    animation: iconoffer 2s ease-in-out infinite;
+}
+@keyframes iconoffer{
+    0%{
+        transform: rotateX(0deg);
+    }
+    25%{
+        transform: rotateX(30deg);
+    }
+    50%{
+        transform: rotateX(0deg);
+    }
+    75%{
+        transform: rotateX(-30deg);
+    }
+    100%{
+        transform: rotateX(0deg);
+    }
+}
+.icon-offer img{
+    width: 100%;
+    border-radius: 60%;
+}
+.w_holiday{
+    display:grid;
+    grid-template-columns: repeat(4,1fr);
+    align-items: center;
+    gap: 2.5rem;
+    /* justify-content: space-between; */
+}
+.w_holiday .country{
+    position: relative;
+    display: flex;
+    /* width: 240px; */
+    /* margin: 15px; */
+    border-radius: 10px;
+    /* cursor: pointer; */
+    box-shadow: 0 0 1rem #162938;
+    overflow: hidden;
+}
+.country img{
+    /* border-radius: 5px; */
+    width: 100%;
+    transition: .5s ease;
+}
+.country:hover img{
+    transform: scale(1.1);
+} 
+.country .country-layer{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0,0,0,.1),#162938);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /* font-size: 2em; */
+    text-align: center;
+    /* padding: 0 4rem; */
+    transform:  translateY(100%) ;
+    transition: .5s ease;
+}
+.country:hover .country-layer{
+    transform:  translateY(0) ;
+
+}
+.country .layer{
+    width: 100%;
+    height: 210px;
+}
+.country .layer h2,h1{
+    font-size: 2em;
+    font-family:"sofia",sans-serif ;
+    text-align: center;
+    align-items: center;
+    color: #162938;
+}
+.country .layer h4{
+    font-size: 1.1em;
+    font-family:"sofia",sans-serif ;
+    text-align: center;
+    align-items: center;
+    color: #162938;
+}
+.country .layer p{
+    font-size:1rem;
+    color:#4e83ab;
+    opacity: 70%;
+    margin: .3rem 0 1rem;
+}
+
+.country-layer h4{
+    font-size: 2rem;
+    color: #1d1b8a;
+    text-align: center;
+    /* margin-left: -35px; */
+}
+.country-layer p{
+    font-size: 1.6rem;
+    color: orange;
+    /* opacity: 70%; */
+    margin: .3rem 0 1rem;
+}
+.country-layer a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 5rem;
+    height: 5rem;
+    /* background-color: #503838; */
+    border-radius: 50%;
+}
+.country-layer a i{
+    font-size: 2rem;
+    color: #4e83ab;
+}
+.country .layer a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 20rem;
+    height: 5rem;
+    /* background-color: #503838; */
+    border-radius: 50%;
+    /* font-size: 2em; */
+    margin-left: 10px;
+}
+.layer a i{
+    font-size: 2rem;
+    color: #4e83ab;
+}
+.main-footer{
+    background: whitesmoke;
+    /* margin-top: 50px; */
+    display: grid;
+    grid-template-rows: repeat(2,1fr);
+    /* margin-left: 20px; */
+}
+.footer{
+    margin-left: 20px;
+    display:grid;
+    grid-template-columns: repeat(3,1fr);
+    align-items: center;
+    gap: 2.5rem;
+}
+.footer .footer-title{
+    margin-left: 20px;
+    font-size: 18px;
+
+}
+.main-footer .cpright{
+    margin-top: 40px;
+    font-size: 20px;
+    text-align: center;
+    align-items: center
+;
+}
+.footer-title li{
+    cursor: pointer;
+    text-decoration: none;
+    transform: scale(1);
+    transition: transform .5s ease;
+}
+.footer-title li:hover{
+    text-decoration: underline;
+    transform: scale(1.1);
+}
+/* #f2f2f2 */
+.ads{
+    margin-top: 50px;
+    /* height: 1000px; */
+    /* background:url(https://promos.makemytrip.com/images/jackpot-bk2-100423.png) no-repeat ; */
+
+}
+.wrapper{
+    padding: 25px 0px; background-size: 100% 40%;
+    position: relative; 
+    background: #f2f2f2 url(https://promos.makemytrip.com/images/jackpot-bk2-100423.png) no-repeat;
+    background-size: contain;
+    padding: 50px 0px;
+}
+.deal{
+    align-items:center;
+    text-align: center;
+    display: grid;
+    grid-template-rows: repeat(2,1fr);
+    width: 100%; max-width: 900px; margin: 0 auto;
+}
+.deal .bg-image{
+    /* display:grid;
+    grid-template-columns: repeat(2,1fr); */
+    /* margin-bottom: 30px;  */
+    padding: 0px 15px; 
+    display: flex; 
+    align-items: flex-start; 
+    justify-content: center;
+     /* margin-bottom: 50px;  */
+     padding: 0px 100px; 
+}
+.deal .bg-image img{
+    align-items: center;
+    /* height: 80px; */
+    width: 50px; 
+    margin-right: 10px;
+    width: 80px;
+    flex-shrink: 0; 
+    margin-right: 20px;
+    animation: floatImage 2s linear infinite;
+    left: calc(50vw - 1rem);
+}
+@keyframes floatImage{
+    0%{
+        transform: rotateX(0deg);
+    }
+    25%{
+        transform: rotate(90deg);
+    }
+    50%{
+        transform: translateX(180deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+.bg-image h2{
+    font-size: 30px; line-height: 36px;
+    font-family: 'Anton', sans-serif;   
+    color: #fff; font-size: 60px;
+    line-height: 1.16; 
+    border-bottom: 2px dashed #fff; 
+    padding-bottom: 10px; 
+    text-transform: uppercase; 
+    font-weight: 400; 
+}
+.offer{
+    text-align: center;
+    /* transform: ; */
+    animation: offen 4s linear infinite;
+    left: calc(50vw - 1rem);
+}
+@keyframes offen {
+    0%{
+        opacity: 0;
+    }
+    25%{
+       opacity: 100;
+    }
+    50%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 100;
+    }
+}
+.offer img{
+    max-width: 400px;
+}
+/* @media screen (max-width: 767px) {
+    min-width: 200px;
+} */
+.offerTitle{
+    font-family: 'Anton', sans-serif; 
+    color: #bf452c; font-size: 70px;  
+    line-height: 1.16; font-weight: 400; 
+    text-align: center; 
+}
+.offerDest{
+    color: #2f2f2f; font-size: 30px; 
+    line-height: 34px; text-align: center; 
+    text-transform: uppercase; 
+    margin: 10px 0 5px 0;
+}
+.offerName{
+    color: #2f2f2f; font-size: 40px; line-height: 45px; 
+    font-weight: 900;  
+    text-align: center; text-transform: uppercase;
+}
+.primaryBtn{
+    background: -moz-linear-gradient(left, #47a4fc 0%, #1c73f6 100%);
+     background: -webkit-linear-gradient(left, #47a4fc 0%,#1c73f6 100%);
+      background: linear-gradient(to right, #47a4fc 0%,#1c73f6 100%);
+       filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#47a4fc', endColorstr='#1c73f6',GradientType=1 ); 
+       border-radius: 30px;  color: #ffffff; display: inline-block; 
+       padding: 12px 25px; text-decoration: none;
+    font-size: 16px; line-height: 20px; font-weight: 700; 
+    text-transform: uppercase;
+}
+.primaryBtn.outlineBtn{ color: #2078f8; border: 1px solid #2078f8; background: transparent; line-height: 18px; }
+/* Hotel */
+.hotel{
+    position: relative; 
+    background: url(https://promos.makemytrip.com/images/jackpot-bk4-100423.png) no-repeat; 
+    background-size: cover; 
+    padding: 50px 0px;
+}
+.hotel-container{
+    /* display: flex; */
+}
+.hotel-block{
+    margin-left: 580px;
+    display: flex;  
+    background-color: #fff;  
+    border-radius: 20px; 
+    box-shadow: 0 2px 13px 0 rgba(0, 0, 0, 0.15); 
+    margin-top: 50px; 
+    max-width: 750px; 
+    overflow: hidden;
+}
+.main-img-hotel{
+    width: 240px; flex-shrink: 0;
+}
+.main-img-hotel img{ width: 100%; height: 100%; object-fit: cover; }
+.main-text-hotel{
+    padding: 30px; 
+    width: calc(100% - 240px); 
+    flex-shrink: 0; 
+    /* text-align: right; */
+}
+.main-text-hotel h2{
+    color: #174880; 
+    font-size: 45px; 
+    line-height: 50px; 
+    font-weight: 900; 
+    /* text-align: right; */
+}
+.main-text-hotel p{
+    color: #174880; 
+    font-size: 22px; 
+    line-height: 26px; 
+    text-transform: uppercase; 
+    margin-top: 5px; 
+    /* text-align: right; */
+}
+.actionBlock{ 
+    text-align: center;
+    margin-top: 45px;
+ }
+ .dealInfoBox1{
+    display: flex; 
+    margin-left: 90px;
+    margin-top: 60px;
+    align-items: center;
+ }
+ .dealCodetxt1 { 
+    background-color: #cbe3fa; 
+    color: #174880; 
+    font-size: 16px; 
+    line-height: 20px; 
+    display:block;  
+    padding: 10px 15px; }
+.dealCode1 { 
+    background: #fff; 
+    border: 1px dashed #cbe3fa; 
+    color: #2f2f2f; 
+    font-size: 20px; 
+    line-height: 24px; 
+    font-weight: 900;  
+    padding: 7px 15px; 
+    display:block; 
+} 
+.img-hotel-container{
+    background: whitesmoke;
+    margin-left: 50px;
+    margin-top: 100px;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+}    
+.img-hotel{
+    border-radius: 10px;
+    width: 100px;
+}
+.img-hotel img{
+    border-radius: 10px;
+    width: 300px;
+    height: 352px;
+}
+.img-hotel img:hover{
+    width: 305px;
+    height: 360px;
+}
+.img-hotel h4{
+    font-size: 20px;
+    color:#C850C0 ;
+    margin-top: 10px;
+    width: 500px;
+    cursor: pointer;
+}
+.img-hotel h4:hover{
+    text-decoration: underline;
+
+}
+.secspon{
+    overflow: hidden;
+    height: 600px;
+    background: #c1c1c1;
+    margin-top: 80px;
+
+}
+:root {
+	--dark: #374151;
+	--darker: #1F2937;
+	--darkest: #111827;
+	--grey: #6B7280;
+	--pink: #EC4899;
+	--purple: #8B5CF6;
+	--light: #EEE;
+}
+.secspon h2{
+    font-family: "Yeon Sung";
+    text-align: center;
+    font-size: 3rem;
+    background: -webkit-linear-gradient(123deg, #74EBD5 0%, #092499 50%, #a52fa5 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;	
+}
+.sponsorSection{
+    font-family: "Yeon Sung";
+    display: grid;
+    grid-template-rows: repeat(2,1fr);
+    width: calc(728px * 4);
+    animation: slide 8s ease-in-out infinite;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+/* .smk{
+    animation: slide2 8s ease-in-out infinite;
+} */
+@keyframes slide {    
+    /* Calculate the margin-left for
+  each of the slides */
+    20% {
+        margin-left: 0px;
+    }
+    40% {
+        margin-left: calc(-728px * 1);
+    }
+    60% {
+        margin-left: calc(-728px * 2);
+    }
+    80% {
+        margin-left: calc(-728px * 3);
+    }
+    100%{
+        margin-left: calc(-728px * 4);
+    }
+}
+/* @keyframes slide2 {    
+    Calculate the margin-left for
+  each of the slides 
+    20% {
+        margin-left: 0px;
+    }
+    40% {
+        margin-left: calc(+728px * 1);
+    }
+    60% {
+        margin-left: calc(+728px * 2);
+    }
+    80% {
+        margin-left: calc(+728px * 3);
+    }
+    90%{
+        margin-left: calc(+728px * 4);
+    }
+    100%{
+        margin-left: calc(+728px * 5);
+    }
+} */
+.sponsorImage{
+    display: grid;
+    width: 130px;
+    height: 150px;
+    grid-template-columns: repeat(8,1fr);
+    margin-top: 50px;
+    float: left;
+    align-items: center;
+    /* margin-right: 50px; */
+}
+.ccc{
+    margin: 0px 25px 0 25px; 
+}
+
+.map{
+    height: 740px;
+    background-color: #bfc4d091;
+    align-items: center;
+}
+.map h2{
+    text-align: center;
+    padding-bottom:20px ;
+    font-family: "Yeon Sung";
+    font-size: 3rem;
+    background: -webkit-linear-gradient(113deg, #301ca3 60%, #a52fa5 50%);
+    background-color: #4158D0;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+/* map h2 img{
+    width: 3px;
+    height: 5px;
+} */
+#map{
+    width: 140vh;
+    height: 70vh;
+    margin-left: 250px;
+    
+}
