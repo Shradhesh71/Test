@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Go My Trip | Home</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/views/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Kalam&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,7 +17,7 @@
    
 </head>
 
-<body  onload="hello();" >
+<body  onload="hello();" > 
     <header>
     <nav class="navigator">
         <a href="#" class="menu-btn">Home</a>
@@ -73,24 +73,24 @@
         </div>
         <div class="from-box reg">
             <h2>Registration</h2>
-            <form action="#">
+            <form action="/" method="post">
                 <div class="input-box">
                     <span class="icon"><i class="fa-solid fa-user"></i></span>
-                    <input type="name" required>
+                    <input type="name" name="username" required>
                     <label>username</label>
                 </div>
                 <div class="input-box">
                     <span class="icon"><i class="fa-solid fa-envelope"></i></span>
-                    <input type="email" required>
+                    <input type="email" name="email" required>
                     <label>Email</label>
                 </div>
                 <div class="input-box">
                     <span class="icon"><i class="fa-solid fa-lock"></i></span>
-                    <input type="password" required>
+                    <input type="password" name="password" required>
                     <label>Password</label>
                 </div>
                 <div class="remember-forget">
-                    <label><input type="checkbox"> I agree to the terms & condition </label>
+                    <label><input type="checkbox" required> I agree to the terms & condition </label>
                 </div>
                 <button type="submit" class="btn">Register</button>
                 <div class="login-register">
@@ -208,7 +208,8 @@
         </div>
     </section>
     <div class="map">
-        <h2>At Which  </h2>
+        <h2>Want to Explore new part of World?  </h2>
+        <h2>Place your mark here <img width="60px" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9zUKOxMGE30GDpzN_cnLDrygEvYnqRoJxDw&usqp=CAU" alt=" ~"></h2>
         <div id="map"></div>
     </div>
     <!-- Wnat to kiss the sky? Come with us -->
@@ -332,28 +333,19 @@
         mapboxgl.accessToken = 'pk.eyJ1Ijoic2hyYWRlc2gtamFpbjcxIiwiYSI6ImNsaDJlYnYxZzFjajIzcXJ0eW13cjJhYjcifQ.t2ByRsg5Nqk1ZOXRC8zqWw';
 const map = new mapboxgl.Map({
 container: 'map',
-// Choose from Mapbox's core styles, or make your own style with Mapbox Studio
 style: 'mapbox://styles/mapbox/streets-v12',
 center: [78.590343, 20.965957],
 zoom: 6
 });
-// const marker1 = new mapboxl.Marker({
-//     draggable: false
-// })
-// .setLngLat([11.000, 55.00])
-// .addTo(map);
-// Create a default Marker and add it to the map.
 const marker1 = new mapboxgl.Marker({
     draggable: true
 })
 .setLngLat([78.5972, 20.70651])
 .addTo(map);
- 
-// Create a default Marker, colored black, rotated 45 degrees.
 const marker2 = new mapboxgl.Marker({ color: 'black', rotation: 45 })
 .setLngLat([78.5972, 21.50651])
 .addTo(map);
     </script>
-    <script src="main.js"></script>
+    <script src="/views/main1.js"></script>
 </body>
 </html>
