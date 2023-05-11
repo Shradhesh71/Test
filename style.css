@@ -736,15 +736,6 @@
     margin-top: 80px;
 
 }
-:root {
-	--dark: #374151;
-	--darker: #1F2937;
-	--darkest: #111827;
-	--grey: #6B7280;
-	--pink: #EC4899;
-	--purple: #8B5CF6;
-	--light: #EEE;
-}
 .secspon h2{
     font-family: "Yeon Sung";
     text-align: center;
@@ -756,11 +747,19 @@
 .sponsorSection{
     font-family: "Yeon Sung";
     display: grid;
-    grid-template-rows: repeat(2,1fr);
-    width: calc(728px * 4);
-    animation: slide 8s ease-in-out infinite;
-    margin-left: 50px;
-    margin-right: 50px;
+    grid-template-columns: repeat(3,1fr);
+    /* width: calc(600px * 3); */
+    /* height: 80px; */
+    /* animation: slide 8s ease-in-out infinite; */
+    margin-left: 100px;
+    /* gap: -2.5rem; */
+    /* margin-right: 50px; */
+    padding-top:80px ;
+    align-items: center;
+}
+.carous-item img{
+    width: 400px;
+    height: 300px;
 }
 /* .smk{
     animation: slide2 8s ease-in-out infinite;
