@@ -33,6 +33,30 @@ ScrollReveal().reveal('.dealblock img',{origin:'left'});
 ScrollReveal().reveal('.volunt',{origin:'top'});
 ScrollReveal().reveal('.daside,.work,.aside',{origin:'bottom'});
 
+
+// let specific = document.querySelector(".heading-text");
+// let audio = document.createElement("audio");
+// audio.src = "http://commondatastorage.googleapis.com/codeskulptor-assets/week7-brrring.m4a";
+// document.body.appendChild(audio);
+
+// specific.onmouseover = () => {
+//   audio.play();
+// }
+// specific.onmouseout = () => {
+//     audio.pause();
+// }
+// let specific1 = document.querySelector(".menu-btn");
+// let audio1 = document.createElement("audio");
+// audio1.src = "http://codeskulptor-demos.commondatastorage.googleapis.com/descent/gotitem.mp3";
+// document.body.appendChild(audio1);
+
+// specific1.onmouseover = () => {
+//   audio1.play();
+// }
+// specific1.onmouseout = () => {
+//     audio1.pause();
+// }
+
 // Automayic Slideshow 
 // var myIndex = 0;
 // carousel();
