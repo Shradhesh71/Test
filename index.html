@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Go My Trip | Home</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/views/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Kalam&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -24,10 +24,41 @@
 <body  onload="hello();" > 
     <header>
     <nav class="navigator">
-        <a href="#" class="menu-btn">Home</a>
-        <a href="#" class="menu-btn">About</a>
-        <a href="#services" class="menu-btn">Services</a>
-        <a href="#contact" class="menu-btn">Contact</a>
+        <div class="drpforhover"> 
+        <a href="#" class="menu-btn">Travel Plan&nbsp; 
+            <div class="dropdown-content">
+                <a href="#">Europe</a>
+                <a href="#">Tiawan</a>
+                <a href="#">Bangkok</a>
+            </div>
+        </a></div>
+        <div class="drpforhover">
+        <a href="#" class="menu-btn">About
+            <div class="dropdown-content">
+                <a href="#" >News</a>
+                <a href="#">Careers</a>
+                <a href="#">Privacy</a>
+            </div>
+        </a></div>
+        <div class="drpforhover">
+        <a href="#services" class="menu-btn">Services
+            <div class="dropdown-content">
+                <a href="#flight" > Flights</a>
+                <a href="#hotels">Hotels</a>
+                <a href="https://www.irctc.co.in/nget/train-search" target="_blank">Trains</a>
+                <a href="https://auth.uber.com/v2/?breeze_local_zone=phx5&next_url=https%3A%2F%2Fm.uber.com%2Flogin-redirect%2F%3Fmarketing_vistor_id%3D500a1e87-da6e-4c87-a0db-c072a4f7da7b%26previousPath%3D%252F%26redirect%3Dfalse%26uclick_id%3D30570ca0-7727-4601-9d31-5518743d137d&state=uloBtYh01CPNk5T-nYIje2jg0vGiUjqzg6xq4JpnBj0%3D" target="_blank">Cab</a>
+                <a href="https://www.homestay.com/" target="_blank">Homestays</a>
+                <a href="https://www.redbus.in/" target="_blank">Buses</a>
+            </div>
+        </a></div>
+        <div class="drpforhover">
+        <a href="#contact" class="menu-btn">Contact
+            <div class="dropdown-content">
+                <a href="#">Customer Support</a>
+                <a href="#">Website Feedback</a>
+                <a href="#">Service Guarantee</a>
+            </div>
+        </a></div>
         <button class="menu-btn lg-btn">Login/ Register</button>
     </nav>
     </header>
@@ -54,7 +85,7 @@
         <span class="icon-close"><i class="fa-solid fa-xmark"></i></span>
         <div class="from-box wrp">
             <h2>Login</h2>
-            <form action="#">
+            <form action="/login" method="post">
                 <div class="input-box">
                     <span class="icon"><i class="fa-solid fa-envelope"></i></span>
                     <input type="email" required>
@@ -68,7 +99,7 @@
                 <div class="remember-forget">
                     <label><input type="checkbox"> Remember me <a href="#"> Forgot Password</a></label>
                 </div>
-                <button type="submit" class="btn">Login</button>
+                <button type="submit" class="btn lobtn">Login</button>
                 <div class="login-register">
                     <p>Don't have an account?
                         <a href="#" class="register-link">Register</a></p>
@@ -77,7 +108,7 @@
         </div>
         <div class="from-box reg">
             <h2>Registration</h2>
-            <form action="/" method="post">
+            <form action="/register" method="post">
                 <div class="input-box">
                     <span class="icon"><i class="fa-solid fa-user"></i></span>
                     <input type="name" name="username" required>
@@ -96,7 +127,7 @@
                 <div class="remember-forget">
                     <label><input type="checkbox" required> I agree to the terms & condition </label>
                 </div>
-                <button type="submit" class="btn">Register</button>
+                <button type="submit" class="btn lobtn">Register</button>
                 <div class="login-register">
                     <p>Already have an account?
                         <a href="#" class="login-link">Login </a></p>
@@ -104,10 +135,55 @@
             </form>
         </div>
     </div>
-    <div class="icon-offer">
+    <!--       Toast Notification     -->
+    <div class="toast">
+        <div class="toast-content">
+            <i class="fas fa-solid fa-check check"></i>
+            <div class="toast-message">
+                <span class="text text-1">Success</span>
+                <span class="text text-2">You an login</span>
+            </div>
+        </div>
+        <i class="fa-solid fa-xmark close1"></i>
+        <div class="progress"></div>
+    </div> 
+    <!-- End home page -->
+
+    <!--           OFFER ICON    -->
+    <div class="icon-offer" id="myBtn">
         <img src="https://promos.makemytrip.com/notification/xhdpi//Desktop_SummerSurpriseSale_12Apr.jpg?im=Resize=(134,134)">
     </div>
-    <!-- End home page -->
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+    
+      <!-- Modal content -->
+        <div class="modal-content">
+            <div class="ribbon">
+                <span>50% off</span>
+            </div>
+            <span class="close">&times;</span>
+            <img src="https://pbs.twimg.com/media/CvID2hZVYAAVvUl.jpg">
+            <!-- <div class="slideshow-container">
+                <div class="modal-slides fade">
+                    <img src="https://pbs.twimg.com/media/CvID2hZVYAAVvUl.jpg">
+                </div>
+                 <div class="modal-slides fade">
+                    <img src="https://image.winudf.com/v2/image1/Y29tLm1ha2VteXRyaXBfc2NyZWVuXzBfMTY3OTMxMjc5NV8wOTE/screen-1.webp?fakeurl=1&type=.webp">
+                </div>
+                <div class="modal-slides fade">
+                    <img src="https://img.freepik.com/premium-psd/travel-tourism-social-media-post_531242-145.jpg">
+                </div>
+                <div class="modal-slides fade">
+                    <img src="https://static.wixstatic.com/media/019027_9a55c25d916d450bac7169957efc3f75~mv2_d_1200_1200_s_2.jpg/v1/fill/w_619,h_619,al_c,q_85,usm_0.66_1.00_0.01/019027_9a55c25d916d450bac7169957efc3f75~mv2_d_1200_1200_s_2.jpg">
+                </div>
+             </div> -->
+            <p>Knock Knock!!</p>
+        </div>
+    
+    </div>
+    
+
+    <!--                     Services                  -->
     <section class="sec2 work" id="services" >
         <div class="w_holiday">
             <div class="country11">
@@ -344,6 +420,12 @@
     </div> -->
     <!-- -----------Footer----------- -->
     <div class="main-footer" id="contact">
+        <!-- <div class="waves">
+            <div class="wave" id="wave1"></div>
+            <div class="wave" id="wave2"></div>
+            <div class="wave" id="wave3"></div>
+            <div class="wave" id="wave4"></div>
+        </div> -->
         <div class="footer">
             <div class="footer-title">
                 <h3 class="title">
@@ -409,6 +491,6 @@ const marker2 = new mapboxgl.Marker({ color: 'black', rotation: 45 })
 .setLngLat([78.5972, 21.50651])
 .addTo(map);
     </script>
-    <script src="main1.js"></script>
+    <script src="/views/main.js"></script>
 </body>
 </html>
