@@ -1,15 +1,18 @@
+// const { set } = require("mongoose");
+
 const login = document.querySelector('.login');
 const loginlink = document.querySelector('.login-link');
 const registerlink = document.querySelector('.register-link');
 const btnPopup = document.querySelector('.lg-btn');
 const iconClose = document.querySelector('.icon-close');
+// let userLogin = document.querySelector('.lg-btn');
+// namasteBtn.addEventListener('click', inputMsg);
 
-
-
+ 
 registerlink.addEventListener('click',()=>{
     login.classList.add('active');
 });
-loginlink.addEventListener('click',()=>{
+loginlink.addEventListener('click',()=>{ 
     login.classList.remove('active');
 });
 btnPopup.addEventListener('click',()=>{
@@ -19,21 +22,104 @@ iconClose.addEventListener('click',()=>{
     login.classList.remove('active-popup');
 });
 
+// //            Get the modal
+var modal = document.getElementById("myModal");
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+// When the user clicks the button, open the modal 
+btn.onclick = () => {
+    modal.style.display = "block";
+}
+span.onclick = () => {
+    modal.style.display = "none";
+}
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+}
+// //  Modal Slideshow
+// let slideIndex = 0;
+// showSlides();
+
+// function showSlides(){
+//     let slides = document.getElementsByClassName("modal-slides");
+//     for (let i =0;i<slides.length;i++){
+//         slides[i].style.display = "none";
+//     }
+//     slideindex++;
+//     if(slideindex> slides.length){
+//         slideindex = 1;
+//     }
+//     slides[slideindex-1].style.display = "block";
+// setInterval(showSlides,2000);
+// }
+// function showSlides() {
+//     let i;
+//     let slides = document.getElementsByClassName("mySlides");
+//     let dots = document.getElementsByClassName("dot");
+//     for (i = 0; i < slides.length; i++) {
+//       slides[i].style.display = "none";  
+//     }
+//     slideIndex++;
+//     if (slideIndex > slides.length) {slideIndex = 1}    
+//     for (i = 0; i < dots.length; i++) {
+//       dots[i].className = dots[i].className.replace(" active", "");
+//     }
+//     slides[slideIndex-1].style.display = "block";  
+//     dots[slideIndex-1].className += " active";
+//     setTimeout(showSlides, 2000); // Change image every 2 seconds
+//   }
+
+
 
 // For Scroll
 ScrollReveal({ 
     reset: true,
-    distance: '200px',
+    distance: '250px',
     duration: 2000,
-    delay: 200
+    delay: 250
  });
-//  dealblock
+//  dealblock 
 ScrollReveal().reveal('.hotel-block',{origin:'right'});
-ScrollReveal().reveal('.dealblock img',{origin:'left'});
+ScrollReveal().reveal('.dealblock img,.main-heading',{origin:'left'});
 ScrollReveal().reveal('.volunt',{origin:'top'});
 ScrollReveal().reveal('.daside,.work,.aside',{origin:'bottom'});
 
+//      TOAST notification
+const toast = document.querySelector(".toast");
+const closeIcon = document.querySelector(".close1");
+const progress = document.querySelector(".progress");
+const lobtn = document.querySelector(".lobtn");
 
+let timer1, timer2;
+
+lobtn.addEventListener("click",()=>{
+    toast.classList.add("active");
+    progress.classList.add("active");
+
+    timer1 = setTimeout(()=>{
+        toast.classList.remove("active");
+    },5000);
+    timer2 = setTimeout(()=>{
+        progress.classList.remove("active");
+    },5300);
+});
+
+closeIcon.addEventListener("click",()=>{
+    toast.classList.remove("active");
+
+    setTimeout(()=>{
+        progress.classList.remove("active");
+    },300);
+    clearTimeout(timer1);
+    clearTimeout(timer2);
+});
+
+//     audio  player
 // let specific = document.querySelector(".heading-text");
 // let audio = document.createElement("audio");
 // audio.src = "http://commondatastorage.googleapis.com/codeskulptor-assets/week7-brrring.m4a";
@@ -56,75 +142,3 @@ ScrollReveal().reveal('.daside,.work,.aside',{origin:'bottom'});
 // specific1.onmouseout = () => {
 //     audio1.pause();
 // }
-
-// Automayic Slideshow 
-// var myIndex = 0;
-// carousel();
-
-// function carousel() {
-//   var i;
-//   var x = document.getElementsByClassName("mySlides");
-//   for (i = 0; i < x.length; i++) {
-//     x[i].style.display = "none";  
-//   }
-//   myIndex++;
-//   if (myIndex > x.length) {myIndex = 1}    
-//   x[myIndex-1].style.display = "block";  
-//   setTimeout(carousel, 2000); // Change image every 2 seconds
-// }
-// var myIndex1 = 0;
-// carousel1();
-
-// function carousel1() {
-//   var i;
-//   var x = document.getElementsByClassName("mySlides");
-//   for (i = 0; i < x.length; i++) {
-//     x[i].style.display = "none";  
-//   }
-//   myIndex1++;
-//   if (myIndex1 > x.length) {myIndex1 = 1}    
-//   x[myIndex1-1].style.display = "block";  
-//   setTimeout(carousel1, 2000); // Change image every 2 seconds
-// }
-// let slideIndex = 0;
-// let timeoutId = null;
-// const slides = document.getElementsByClassName("mySlides");
-// const dots = document.getElementsByClassName("dot");
-
-// showSlides();
-// function currentSlide(index) {
-//      slideIndex = index;
-//      showSlides();
-// }
-// function plusSlides(step) {
-  
-//   if(step < 0) {
-//       slideIndex -= 2;
-      
-//       if(slideIndex < 0) {
-//         slideIndex = slides.length - 1;
-//       }
-//   }
-  
-// showSlides();
-// }
-// function showSlides() {
-//   for(let i = 0; i < slides.length; i++) {
-//     slides[i].style.display = "none";
-//     dots[i].classList.remove('active');
-//   }
-//   slideIndex++;
-//   if(slideIndex > slides.length) {
-//     slideIndex = 1
-//   }
-//   slides[slideIndex - 1].style.display = "block";
-//   dots[slideIndex - 1].classList.add('active');
-//    if(timeoutId) {
-//       clearTimeout(timeoutId);
-//    }
-//   timeoutId = setTimeout(showSlides, 1000); // Change image every 5 seconds
-// }
-
-
-
-
